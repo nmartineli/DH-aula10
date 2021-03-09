@@ -3,6 +3,7 @@ const path = require('path');
 const { send } = require('process');
 const app = express();
 
+
 const listaUsuarios = [
     'João',
     'Maria',
@@ -18,6 +19,9 @@ const listaUsuarios = [
 
 // Query Params
 // http://localhost:3000/usuarios?nome=Maria
+
+app.use(express.static(path.join(__dirname, '/src/public/')));
+
 
 app.get('/usuarios', (req, res) => {
     const { nome } = req.query;
