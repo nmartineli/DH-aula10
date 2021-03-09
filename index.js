@@ -1,5 +1,8 @@
 const express = require('express');
+const path = require('path');
+const { send } = require('process');
 const app = express();
+
 const listaUsuarios = [
     'João',
     'Maria',
@@ -21,6 +24,10 @@ app.get('/usuarios', (req, res) => {
     let listaRetorno = listaUsuarios.filter(i => i.includes(nome || ""));
     return res.json(listaRetorno); 
 });
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/views/index.html'));
+})
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
