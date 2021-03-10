@@ -20,7 +20,7 @@ const listaUsuarios = [
 // Query Params
 // http://localhost:3000/usuarios?nome=Maria
 
-app.use(express.static(path.join(__dirname, '/src/public/')));
+app.use(express.static(path.join(__dirname, '/src/assets/')));
 
 
 app.get('/usuarios', (req, res) => {
