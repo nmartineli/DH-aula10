@@ -14,3 +14,37 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid black;
 }
+
+#pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+input {
+  border-radius: 5px;
+  padding: 8px;
+  border: 0.5px solid gray;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 15px;
+}
+
+.lista {
+  display: block;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.imagemPokemon {
+  width: 150px;
+}
+
+strong {
+  padding-bottom: 5px;
+}
